@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+
 }
 
 .image-wrapper {
@@ -47,4 +48,24 @@
 
 .image-info p {
     margin: 0;
+}
+ 
+.logo-container {
+    display: flex;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin between images */
+}
+
+.logo-container img:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -5px; /* Adjust the distance between the logo and the line */
+    width: 2px; /* Adjust the width of the line */
+    background-color: black; /* Adjust the color of the line */
 }
